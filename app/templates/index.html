@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% if name %}
+		<title> {{name}} </title>
+		{% else %}
+		<title> first flask app </title>
+		{% endif %}
+	</head>
+
+	<body>
+		{% if pred %} 
+		<h2> {{pred}} </h2> 
+		{% endif %}
+
+		{% if K_Reuss %} 
+		<h3> K_Reuss: {{K_Reuss}} </h3> 
+		{% endif %}
+
+		{% if K_VRH %}
+		<h3> K_VRH: {{K_VRH}} </h3>
+		{% endif %}
+
+		{% if K_Voigt %}
+		<h3> K_Voigt: {{K_Voigt}} </h3>
+		{% endif %}
+
+		{% if elastic_anisotropy %}
+		<h3> elastic_anisotropy: {{elastic_anisotropy}} </h3>
+		{% endif %}
+
+		<form action="/index" method="post">
+			<input type="text" name="K_Reuss" placeholder="Enter K_Reuss"> <br><br>
+			<input type="text" name="K_VRH" placeholder="Enter K_VRH"> <br><br>
+			<input type="text" name="K_Voigt" placeholder="Enter K_Voigt"> <br><br>
+			<input type="text" name="elastic_anisotropy" placeholder="Enter elastic_anisotropy"> <br><br>
+			<input type="submit" value="Submit">
+		</form>
+
+	</body>
+</html>
